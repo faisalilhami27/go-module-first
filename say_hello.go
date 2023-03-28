@@ -1,13 +1,13 @@
 package go_module_first
 
-type FilterName func(string) bool
+type FilterString func(string, string) bool
 
-func SayHello(name string, filterName FilterName) string {
+func FilterName(firstName, lastName string, filterString FilterString) string {
 	var status string
-	if filterName(name) {
+	if filterString(firstName, lastName) {
 		status = "You are blocked"
 	} else {
-		status = "Hello my name is " + name
+		status = "Hello my name is " + firstName + " " + lastName
 	}
 	return status
 }
