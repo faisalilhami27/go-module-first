@@ -7,7 +7,7 @@ func SayHello(name string, filterName FilterName) string {
 	if filterName(name) {
 		status = "You are blocked"
 	} else {
-		status = "Hello " + name
+		status = "Hello my name is " + name
 	}
 	return status
 }
